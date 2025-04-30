@@ -32,7 +32,7 @@ html {
   z-index: 1000;
 }
 .nav .nav-in {
-  display: flex;
+  text-align: center;
 
   justify-content: space-between;
 }
@@ -564,4 +564,48 @@ html {
 
 .footer .container .link p {
   padding: 3px;
+}
+
+
+
+
+
+/* ABOUT ME CSS------------------------- */
+
+.About-me .container .About-me1
+{
+ 
+  text-align: center;
+}
+.About-me .container .About-me1 img
+{    width: 100%;
+  max-width: 259px;
+  border-radius: 152px;
+  margin: 15px auto;
+  display: block;
+  border: 5px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.About-me .container .About-me1 .about
+{
+  font-family: sans-serif;
+  padding: 23px;
+}
+.About-me .container .About-me1 .about h4
+{
+  padding: 23px; 
+}
+
+
+.About-me .container .certificate 
+{
+  color: black;
+
+}
+
+.About-me .container .certificate a
+{
+  color: rgb(101, 101, 186);
+  
+text-decoration: none;
 }

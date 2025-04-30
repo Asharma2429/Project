@@ -1,11 +1,13 @@
 import './App.css';
-import { Project } from './Project';
+// import { Project } from './Project'
+import {Test} from './Test';
 
 
 function App() {
   return (
     <>
-    <Project/>
+    {/* <Project/> */}
+    <Test/>
     
     </>
   );
