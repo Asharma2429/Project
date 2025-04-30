@@ -1,38 +1,567 @@
-.App {
-  text-align: center;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+  /* NAVIGATION BAR CSS------------------------------------ */
+
+  
+.nav .nav-in .image img {
+  width: 100%;
+  margin-top: 14px;
+  max-width: 102px;
+}
+.nav {
+  background-color: rgb(29, 40, 39);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav .nav-in {
+  display: flex;
+
+  justify-content: space-between;
+}
+.nav .nav-in .list .menu li {
+  display: inline-block;
+  padding: 17px;
+  cursor: pointer;
+  font-family: system-ui;
+}
+.nav .nav-in .list .menu a {
+  color: white;
+}
+.nav .nav-in .list .menu li:hover {
+  color: rgb(172, 170, 170);
+}
+.nav .nav-in .list .bar
+{
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+
+/* slider css --------------------------------------------------------------*/
+
+.slider .image {
+  display: flex;
+  position: relative;
+}
+.slider .image img {
+  width: 100%;
+  height: 550px;
+  animation: fead 3s;
+}
+.slider .btn .nxt {
+  position: absolute;
+  top: 45%;
+  right: 8px;
+  width: 26px;
+  border: none;
+  font-size: 20px;
+  opacity: 0.5;
+  background: none;
+}
+
+.slider .btn .nxt:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.slider .btn .back {
+  position: absolute;
+  top: 45%;
+  left: 8px;
+  width: 26px;
+  border: none;
+  font-size: 20px;
+  background: none;
+  opacity: 0.5;
+}
+.slider .btn .back:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.d-none {
+  display: none;
+}
+@keyframes fead {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+
+
+
+
+
+
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: lightgray; /* Inactive dot color */
+  cursor: pointer;
+}
+
+.active-dot {
+  background-color: gray; /* Active dot color */
+}
+
+
+
+/* ABOUT PRODUCTS CSS ----------------------------------------------------------- */
+
+/* PRODUCT 1 ------------------ */
+
+.pro {
+  margin-top: 52px;
+}
+.pro .center-box {
+  text-align: center;
+}
+.pro .center-box .tagp {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+.pro .center-box h1 {
+  font-family: sans-serif;
+  font-size: 37px;
+}
+.pro .center-box .ptag {
+  font-family: system-ui;
+}
+.pro .pro-in {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  margin-top: 39px;
+}
+.pro .pro-in .left-box {
+  width: 45%;
+}
+.pro .pro-in .left-box img {
+  width: 100%;
+}
+.pro .pro-in .right-box {
+  width: 51%;
+}
+.pro .pro-in .right-box h2 {
+  font-family: math;
+  font-size: 23px;
+}
+.pro .pro-in .right-box h1 {
+  color: #c5c6d0;
+  font-size: 113px;
+  font-family: system-ui;
+  position: absolute;
+  z-index: -5;
+  margin-top: -54px;
+}
+.pro .pro-in .right-box .ptext {
+  font-family: system-ui;
+  color: black;
+  margin-top: 40px;
+  line-height: 28px;
+}
+.pro .pro-in .right-box .textp {
+  font-family: system-ui;
+  color: black;
+  margin-top: 18px;
+  line-height: 28px;
+}
+
+.pro .pro-in .right-box h3 {
+  font-family: sans-serif;
+  margin-top: 29px;
+  font-size: 27px;
+}
+.pro .pro-in .right-box .money {
+  margin-top: 18px;
+  font-family: none;
+  font-weight: bold;
+}
+.pro .pro-in .right-box .money del {
+  color: #6d6d6d;
+  padding-right: 20px;
+}
+.pro .pro-in .right-box .btn {
+  margin-top: 32px;
+  padding: 9px;
+}
+.pro .pro-in .right-box .btn .view {
+  background-color: #494848;
+  color: #e7e7e7;
+  padding: 6px;
+  width: 139px;
+  font-size: 13px;
+  font-family: revert;
+  font-weight: bold;
+  margin-right: 26px;
+}
+.pro .pro-in .right-box .btn .view:hover {
+  background-color: white;
+  transition: all 0.5s;
+  color: #494848;
+  cursor: pointer;
+}
+.pro .pro-in .right-box .btn .cart {
+  background-color: white;
+  color: black;
+  padding: 6px;
+  width: 139px;
+  font-size: 13px;
+  font-family: revert;
+  font-weight: bold;
+}
+.pro .pro-in .right-box .btn .cart:hover {
+  background-color: #494848;
+  transition: all 0.5s;
+  color: white;
+  cursor: pointer;
+}
+
+/* PRODUCT 2 ------------------ */
+
+.pro .pro-in1 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 39px;
+}
+.pro .pro-in1 .right {
+  width: 45%;
+}
+.pro .pro-in1 .right img {
+  width: 100%;
+}
+.pro .pro-in1 .left {
+  width: 51%;
+}
+.pro .pro-in1 .left h2 {
+  font-family: math;
+  font-size: 23px;
+}
+.pro .pro-in1 .left h1 {
+  color: #c5c6d0;
+  font-size: 113px;
+  font-family: system-ui;
+  position: absolute;
+  z-index: -5;
+  margin-top: -54px;
+}
+.pro .pro-in1 .left .ptextp {
+  font-family: system-ui;
+  color: black;
+  margin-top: 40px;
+  line-height: 28px;
+}
+.pro .pro-in1 .left .textptext {
+  font-family: system-ui;
+  color: black;
+  margin-top: 18px;
+  line-height: 28px;
+}
+
+.pro .pro-in1 .left h3 {
+  font-family: sans-serif;
+  margin-top: 29px;
+  font-size: 27px;
+}
+.pro .pro-in1 .left .money {
+  margin-top: 18px;
+  font-family: none;
+  font-weight: bold;
+}
+.pro .pro-in1 .left .money del {
+  color: #6d6d6d;
+  padding-right: 20px;
+}
+.pro .pro-in1 .left .button {
+  margin-top: 32px;
+  padding: 9px;
+}
+.pro .pro-in1 .left .button .views {
+  background-color: #494848;
+  color: #e7e7e7;
+  padding: 6px;
+  width: 139px;
+  font-size: 13px;
+  font-family: revert;
+  font-weight: bold;
+  margin-right: 26px;
+}
+.pro .pro-in1 .left .button .views:hover {
+  background-color: white;
+  transition: all 0.5s;
+  color: #494848;
+  cursor: pointer;
+}
+.pro .pro-in1 .left .button .carts {
+  background-color: white;
+  color: black;
+  padding: 6px;
+  width: 139px;
+  font-size: 13px;
+  font-family: revert;
+  font-weight: bold;
+}
+.pro .pro-in1 .left .button .carts:hover {
+  background-color: #494848;
+  transition: all 0.5s;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* CONTACT CSS----------------------------------------------- */
+
+.contact {
+  background-color: #dadada2e;
+  padding-bottom: 71px;
+}
+
+.contact .form {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.contact .form h1 {
+  font-family: cursive;
+  font-size: 36px;
+  margin-bottom: 17px;
+  padding-bottom: 7px;
+  display: inline;
+  border-bottom: 4px solid rgb(29, 40, 39);
+}
+
+.contact .form p {
+  color: gray;
+  font-size: 19px;
+  font-family: serif;
+  margin-left: 83px;
+  padding-bottom: 59px;
+}
+
+.contact .contact-in {
+  display: flex;
+}
+
+.contact .contact-in .box-1 {
+  width: 30%;
+  background-color: rgb(29, 40, 39);
+}
+
+.contact .contact-in .box-2 {
+  background-color: white;
+  width: 67%;
+}
+
+.contact .contact-in .box-1 .location {
+  cursor: pointer;
+  display: flex;
+  width: 91%;
+  border-radius: 9px;
+  background-color: rgb(29, 40, 39);
+  margin: 20px;
+}
+
+.contact .contact-in .box-1 .location:hover {
+  background-color: rgb(21, 21, 21);
+}
+
+.contact .contact-in .box-1 .location .image img {
+  width: 72px;
+  padding: 9px;
+  margin-top: 8px;
+}
+
+.contact .contact-in .box-1 .location .text {
+  padding: 2px;
+  font-family: cursive;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.contact .contact-in .box-2 .input {
+  display: flex;
+  justify-content: space-between;
+  padding: 23px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact .contact-in .box-2 .input .inp {
+  width: 49%;
+  height: 49px;
+  font-size: 14px;
+  padding: 22px;
+  border: 1px solid gray;
+}
+
+.contact .contact-in .box-2 .subject {
+  padding: 23px;
+}
+
+.contact .contact-in .box-2 .subject .sub {
+  width: 100%;
+  border: 1px solid gray;
+  height: 49px;
+  font-size: 14px;
+  padding: 22px;
+  border: 1px solid gray;
+}
+
+.contact .contact-in .box-2 .textarea {
+  padding: 20px;
+}
+
+.contact .contact-in .box-2 .textarea .ta {
+  width: 100%;
+  border: 1px solid gray;
+}
+
+.contact .contact-in .box-2 .bt {
+  text-align: center;
+}
+
+.contact .contact-in .box-2 .bt button {
+  background-color: transparent;
+  color: rgb(29, 40, 39);
+  border: 2px solid;
+  border-radius: 33px;
+  margin-top: 16px;
+  width: 169px;
+
+  height: 50px;
+  font-size: 20px;
+  font-family: cursive;
+}
+
+.contact .contact-in .box-2 button:hover {
+  background-color: rgb(84, 99, 98);
+  transition: all 0.5s;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* FOOTER CSS---------------------------------------------------------- */
+
+.footer {
+  background-color: rgb(29, 40, 39);
+}
+
+.footer .container .footer-in {
+  display: flex;
+  padding-bottom: 44px;
+}
+
+.footer .container .footer-in .box-1 {
+  background-color: rgb(29, 40, 39);
+  cursor: pointer;
+  width: 40%;
+  padding: 20px;
+  font-family: cursive;
+  color: white;
+}
+
+.footer .container .footer-in .box-1 p {
+  font-family: math;
+}
+
+.footer .container .footer-in .icon {
+  margin-top: 22px;
+  font-size: 19px;
+}
+
+.footer .container .footer-in .icon li {
+  display: inline-block;
+  padding: 17px;
+}
+
+.footer .container .footer-in .box-2 {
+  background-color: rgb(29, 40, 39);
+  width: 20%;
+  color: white;
+  font-family: monospace;
+}
+
+.footer .container .footer-in .box-2 h2 {
+  padding: 35px;
+}
+
+.footer .container .footer-in .box-2 ul {
+  margin-left: 22px;
+  margin-top: -20px;
+}
+
+.footer .container .footer-in .box-2 ul li {
+  padding: 14px;
+  cursor: pointer;
+  color: #dfd9d9;
+  font-family: sans-serif;
+  display: block;
+}
+
+.footer .container .footer-in .box-2 ul li:hover {
+  color: white;
+}
+
+.footer .container .footer-in .box-3 {
+  background-color: rgb(29, 40, 39);
+  color: white;
+  font-family: monospace;
+  width: 20%;
+}
+
+.footer .container .footer-in .box-3 h2 {
+  padding: 35px;
+}
+
+.footer .container .footer-in .box-3 p {
+  font-family: sans-serif;
+  margin-left: 21px;
+  padding: 14px;
+}
+
+.footer .container .link {
+  text-align: center;
+  cursor: pointer;
+  color: #e0dcdc;
+  font-family: system-ui;
+}
+
+.footer .container .link strong {
+  color: white;
+}
+
+.footer .container .link p {
+  padding: 3px;
 }
